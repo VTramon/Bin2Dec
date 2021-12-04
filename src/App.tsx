@@ -1,4 +1,5 @@
 import React, { FormEvent, useState } from 'react';
+import style from './style.module.scss';
 
 function App() {
   const [binary, setBinary] = useState('');
@@ -8,7 +9,7 @@ function App() {
     event.preventDefault();
 
     if (binary.match(/^[0-1]+$/) === null) {
-      return <span>numeros binarios contem apenas 0 e 1</span>;
+      return alert('numeros binarios contem apenas 0 e 1');
     }
 
     const invertedBinary = binary.split('').map(Number).reverse();
@@ -20,12 +21,15 @@ function App() {
     setDecimal(result);
   };
   return (
-    <div className="App">
-      <h1>Bin2Dec</h1>
+    <div className={style.app}>
+      <div className={style.title}>
+        <h1>Bin2Dec</h1>
+      </div>
       <form onSubmit={handleSubmit}>
-        <div>
-          <h2>conversor de números binários para decimais</h2>
+        <h2>Conversor de números binários para decimais</h2>
+        <div className={style.inputs}>
           <input
+            className={style.binary}
             onChange={(event) => setBinary(event.target.value)}
             type="string"
             placeholder="binário"

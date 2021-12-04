@@ -1,0 +1,49 @@
+.app {
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: center;
+  width: 70vw;
+  height: 70vh;
+  padding: 30px;
+  background-color: #ffb703;
+  border: 5px ridge #fb8500;
+  color: #023047;
+  .title {
+    margin-bottom: 150px;
+  }
+}
+
+form {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  button {
+    border: 1px solid gray;
+    border-radius: 8px;
+    height: 35px;
+    width: 100px;
+    cursor: pointer;
+  }
+}
+
+.inputs {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: normal;
+  margin-top: 25px;
+  margin-bottom: 15px;
+  width: 100%;
+  input {
+    width: 40%;
+    height: 30px;
+    border-radius: 5px;
+    background-color: lightgray;
+    border: 1px solid gray;
+  }
+  .binary {
+    background-color: white;
+  }
+}
